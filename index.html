@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Insights — Dirac Of Fragrance (Compact Button + Anim)</title>
+  <title>Insights — Dirac Of Fragrance (Speaker Outside)</title>
   <meta name="description" content="Kumpulan insight dari Dirac Of Fragrance">
   <style>
     :root{
@@ -51,7 +51,7 @@
     .brand h1{margin:0;font-size:1.05rem;font-weight:800}
     .brand .sub{margin-top:2px;color:var(--muted);font-size:.85rem}
 
-    /* NAV: left-aligned, small like previous buttons */
+    /* NAV: left-aligned, compact */
     .nav{
       display:flex;gap:.6rem;overflow-x:auto;-webkit-overflow-scrolling:touch;
       padding:.45rem 0 .7rem;scrollbar-width:none; justify-content:flex-start;
@@ -64,7 +64,6 @@
       position:relative; overflow:hidden; transition:transform .15s ease, box-shadow .2s ease;
       box-shadow:0 6px 18px rgba(59,130,246,.15);
       text-transform:capitalize;
-      /* subtle breathing glow */
       animation:pulseGlow 3.5s ease-in-out infinite;
     }
     @keyframes pulseGlow{
@@ -72,7 +71,6 @@
       50%{box-shadow:0 8px 26px rgba(59,130,246,.28)}
     }
     .nav .btn-home:hover{transform:translateY(-1px)}
-    /* shine sweep on hover */
     .nav .btn-home::after{
       content:""; position:absolute; top:-120%; left:-30%;
       width:60%; height:340%; pointer-events:none;
@@ -94,30 +92,27 @@
     .card p{margin:.65rem 0}
     .lead{font-weight:600}
 
-    /* Video wrapper + tombol */
+    /* Video wrapper */
     .vid{position:relative;aspect-ratio:16/9;background:#000;border-radius:12px;overflow:hidden;margin-bottom:.6rem}
     .vid video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
     .cap{position:absolute;left:10px;bottom:10px;background:rgba(0,0,0,.45);
       color:#fff;padding:.25rem .5rem;border-radius:8px;font-size:.75rem}
-    .mute-toggle, .play-overlay{
-      position:absolute; border:none; color:#fff; cursor:pointer;
-      display:grid; place-items:center; line-height:1; backdrop-filter: blur(4px);
-      box-shadow:0 8px 22px rgba(0,0,0,.35);
-    }
+
+    /* Speaker button OUTSIDE video */
+    .card-tools{display:flex;gap:.5rem;align-items:center;margin:.4rem 0 .2rem}
     .mute-toggle{
-      top:10px; right:10px; width:44px; height:44px; border-radius:999px;
-      background:var(--glass); font-size:20px;
+      position:static; border:1px solid var(--border); color:#fff; cursor:pointer;
+      display:inline-grid; place-items:center; line-height:1;
+      background:var(--panel); padding:.45rem .65rem; border-radius:10px; font-size:18px;
+      transition:transform .15s ease, background .2s ease, box-shadow .2s ease;
+      box-shadow:0 6px 18px rgba(0,0,0,.18);
     }
-    .play-overlay{
-      inset:auto; left:50%; top:50%; transform:translate(-50%,-50%);
-      width:66px; height:66px; border-radius:999px; font-size:26px;
-      background:rgba(0,0,0,.55);
-      display:none;
-    }
-    .mute-toggle:active, .play-overlay:active{transform:scale(.98)}
-    .mute-toggle.out{position:static; width:44px; height:44px; border-radius:999px;
-      background:var(--panel); color:#fff; font-size:20px; border:1px solid var(--border); box-shadow:none}
-    .mute-toggle.out:active{transform:scale(.98)}
+    .mute-toggle:hover{transform:translateY(-1px); background:#111827}
+    .mute-toggle:active{transform:scale(.98)}
+    /* (Optional) overlay style if ever needed in future */
+    .mute-overlay{position:absolute; top:10px; right:10px; width:44px; height:44px; border-radius:999px;
+      background:var(--glass); font-size:20px; box-shadow:0 8px 22px rgba(0,0,0,.35)}
+    .play-overlay{display:none} /* not used here */
 
     .photo{position:relative;aspect-ratio:16/9;background:#111;border-radius:12px;overflow:hidden;margin-bottom:.6rem}
     .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
@@ -137,7 +132,6 @@
     <div class="container">
       <div class="brand-row">
         <div class="logo">
-          <!-- Ganti file ini setelah upload: images/logo.png -->
           <img src="images/logo.png" alt="Logo Dirac Of Fragrance">
           <span class="fallback">?</span>
         </div>
@@ -146,7 +140,6 @@
           <div class="sub">Reseller Parfum • CEO A. Zaenuddin</div>
         </div>
       </div>
-      <!-- Single, smaller, left-aligned button -->
       <nav class="nav">
         <a class="btn-home" href="https://diraccc.github.io/companyprofile/" aria-label="Kembali ke beranda">
           kembali ke beranda
@@ -168,7 +161,7 @@
           <h2>Gimana Sih Caranya Sukses di Bidang Reseller Produk?</h2>
           <div class="date">Diperbarui</div>
           <div class="card-tools">
-            <button class="mute-toggle out" type="button" aria-label="Unmute video" data-state="muted">🔇</button>
+            <button class="mute-toggle" type="button" aria-label="Unmute video" data-state="muted">🔇</button>
           </div>
           <p class="lead">Sukses di bidang reseller produk dimulai dari memahami kebutuhan pasar. Produk yang kamu jual harus relevan dengan gaya hidup dan selera konsumen.</p>
           <p>Kalau di parfum, misalnya, ada pembeli yang mencari aroma segar untuk aktivitas harian, ada juga yang ingin aroma elegan untuk acara formal. Dengan mengenali kebutuhan ini, kamu bisa lebih tepat dalam memberi rekomendasi dan membangun kesan bahwa kamu bukan hanya menjual produk, tetapi juga memberi solusi.</p>
@@ -248,7 +241,6 @@
     document.querySelectorAll('article.card').forEach(function(card){
       const video = card.querySelector('.vid video');
       const btn = card.querySelector('.mute-toggle');
-
       if(!video || !btn) return;
 
       // Pastikan atribut sesuai kebijakan autoplay
@@ -284,6 +276,7 @@
         updateIcon();
       });
 
+      // Opsional: klik video untuk play/pause
       video.addEventListener('click', function(){
         if (video.paused) tryPlay(); else video.pause();
       });
