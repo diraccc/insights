@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Insights — Dirac Of Fragrance</title>
+  <meta name="description" content="Kumpulan insight dari Dirac Of Fragrance">
+  <style>
+    :root{
+      --bg:#0b0e12;
+      --panel:#0f1720;
+      --text:#e6edf3;
+      --muted:#9aa7b3;
+      --accent:#3b82f6;
+      --accent2:#2563eb;
+      --border:rgba(255,255,255,.08);
+      --shadow:0 6px 30px rgba(0,0,0,.35);
+      --radius:16px;
+      --glass:rgba(0,0,0,.55);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text);
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1040px,92%);margin-inline:auto}
+
+    /* Sticky Header */
+    header{
+      position:sticky; top:0; z-index:1000;
+      background:linear-gradient(180deg, rgba(15,23,32,.98), rgba(15,23,32,.92) 60%, rgba(15,23,32,0));
+      backdrop-filter:saturate(140%) blur(6px);
+      border-bottom:1px solid var(--border);
+    }
+    .brand-row{display:flex;align-items:center;gap:.8rem;padding:.7rem .2rem .5rem}
+    .logo{width:44px;height:44px;border-radius:12px;background:#0ea5e9;
+      color:#001018;display:grid;place-items:center;font-weight:800}
+    .brand h1{margin:0;font-size:1.05rem;font-weight:800}
+    .brand .sub{margin-top:2px;color:var(--muted);font-size:.85rem}
+    .nav{display:flex;gap:.6rem;overflow-x:auto;-webkit-overflow-scrolling:touch;
+      padding:.4rem 0 .6rem;scrollbar-width:none}
+    .nav::-webkit-scrollbar{display:none}
+    .nav a{padding:.55rem .9rem;border-radius:10px;white-space:nowrap}
+    .nav a:hover{background:rgba(255,255,255,.06)}
+    .nav a.active{background:rgba(59,130,246,.18); color:#dbeafe;border:1px solid rgba(59,130,246,.35)}
+    .nav .cta{background:linear-gradient(180deg, var(--accent), var(--accent2));color:#fff;
+      box-shadow:0 8px 22px rgba(59,130,246,.35)}
+
+    main{padding:14px 0 64px}
+    .list{display:grid;gap:1.1rem}
+    .card{background:var(--panel);border:1px solid var(--border);border-radius:14px;
+          padding:1rem;box-shadow:var(--shadow)}
+    .card h2{margin:.4rem 0 .4rem;font-size:1.1rem}
+    .date{color:var(--muted);font-size:.9rem;margin-bottom:.6rem}
+    .card p{margin:.65rem 0}
+    .lead{font-weight:600}
+
+    /* Responsive video wrapper + mute/unmute button */
+    .vid{position:relative;aspect-ratio:16/9;background:#000;border-radius:12px;overflow:hidden}
+    .vid video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+    .cap{position:absolute;left:10px;bottom:10px;background:rgba(0,0,0,.45);
+      color:#fff;padding:.25rem .5rem;border-radius:8px;font-size:.75rem}
+    .mute-toggle{
+      position:absolute;top:10px;right:10px;width:44px;height:44px;border:none;
+      border-radius:999px;background:var(--glass);color:#fff;cursor:pointer;
+      display:grid;place-items:center;font-size:20px;line-height:1;
+      backdrop-filter: blur(4px);
+      box-shadow:0 8px 22px rgba(0,0,0,.35);
+    }
+    .mute-toggle:active{transform:scale(.98)}
+
+    footer{border-top:1px solid var(--border);padding:18px 0;color:var(--muted)}
+    .copy{display:flex;align-items:center;gap:.4rem;flex-wrap:wrap}
+    .dot{width:6px;height:6px;border-radius:50%;background:var(--muted)}
+
+    @media (max-width:480px){
+      .brand h1{font-size:1rem}
+      .brand .sub{font-size:.8rem}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="brand-row">
+        <div class="logo">?</div>
+        <div class="brand">
+          <h1>Dirac Of Fragrance</h1>
+          <div class="sub">Reseller Parfum • CEO A. Zaenuddin</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">Tentang</a>
+        <a href="index.html#products">Produk</a>
+        <a href="index.html#clients">Clients</a>
+        <a class="active" href="insight.html">Insights</a>
+        <a class="cta" href="https://wa.me/6281937036039">Hubungi Kami</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="list">
+
+        <!-- INSIGHT 1 -->
+        <article class="card">
+          <div class="vid">
+            <video autoplay muted playsinline loop preload="metadata"
+                   src="videos/insight-1.mp4" poster="images/insight-1.jpg"></video>
+            <button class="mute-toggle" aria-label="Toggle mute" data-state="muted">🔇</button>
+            <div class="cap">Cuplikan: Varian untuk Pasar Lokal</div>
+          </div>
+          <h2>Memilih Varian Parfum yang Tepat untuk Pasar Lokal</h2>
+          <div class="date">10 September 2025</div>
+          <p class="lead">Memahami preferensi aroma lokal adalah kunci keberhasilan pemasaran parfum. Perbedaan iklim, budaya, dan pola aktivitas sehari‑hari memengaruhi preferensi, sehingga strategi pemilihan varian harus berbasis data, bukan sekadar tren global.</p>
+          <p>Di kawasan pesisir, konsumen cenderung memilih aroma <em>citrus</em>, <em>aquatic</em>, dan <em>green</em> yang terasa bersih serta ringan. Di kota besar, penerimaan terhadap <em>gourmand</em>, <em>amber</em>, dan <em>woody</em> biasanya lebih tinggi karena digunakan pada ruang ber-AC dan aktivitas malam.</p>
+          <p>Kami sarankan lakukan tiga langkah ringan: (1) <strong>sampling terarah</strong>—sediakan tester andalan di etalase; (2) <strong>uji promosi kecil</strong> selama 7–14 hari untuk 3–5 varian prioritas; (3) <strong>pantau konversi</strong> per varian dan waktu pembelian. Dari sini, Anda dapat memetakan varian inti (fast mover), varian diferensiasi (signature), serta varian musiman.</p>
+          <p>Gunakan metrik sederhana: rasio uji-coba ke pembelian, kecepatan habis stok per minggu, dan biaya promosi per transaksi yang berhasil. Dengan begitu, stok dan kampanye bisa disesuaikan secara presisi, memangkas risiko <em>overstock</em> dan meningkatkan perputaran modal.</p>
+        </article>
+
+        <!-- INSIGHT 2 -->
+        <article class="card">
+          <div class="vid">
+            <video autoplay muted playsinline loop preload="metadata"
+                   src="videos/insight-2.mp4" poster="images/insight-2.jpg"></video>
+            <button class="mute-toggle" aria-label="Toggle mute" data-state="muted">🔇</button>
+            <div class="cap">Cuplikan: Strategi Harga</div>
+          </div>
+          <h2>Strategi Harga untuk Reseller Parfum</h2>
+          <div class="date">22 Agustus 2025</div>
+          <p class="lead">Menentukan margin yang sehat membuat bisnis berkelanjutan. Mulailah dari perhitungan biaya per unit yang benar, lalu susun tangga harga yang fleksibel agar volume pembelian naik tanpa mengorbankan profit.</p>
+          <p>Masukkan seluruh komponen biaya: harga beli, ongkos kirim, packing, <em>marketplace fee</em>, retur rata‑rata, hingga biaya konten. Tetapkan <strong>margin dasar 25–40%</strong> untuk menutup operasional dan promosi. Untuk seri premium, margin dapat dinaikkan 50–70% selama nilai produk tersampaikan dengan baik.</p>
+          <p>Bangun <strong>struktur bertingkat</strong>: harga ecer, reseller, dan grosir. Syaratkan kelipatan minimal (mis. 3/6/12 pcs) agar biaya logistik efisien. Lengkapi dengan <em>bundle</em> tematik dan diskon musiman yang tetap menjaga margin total.</p>
+          <p>Monitor metrik: GM% (gross margin), GMROI (margin vs nilai stok), dan CAC promosi per kanal. Jika GMROI turun, evaluasi varian, kurangi SKU lambat, dan fokus pada varian dengan ROI tertinggi.</p>
+        </article>
+
+        <!-- INSIGHT 3 -->
+        <article class="card">
+          <div class="vid">
+            <video autoplay muted playsinline loop preload="metadata"
+                   src="videos/insight-3.mp4" poster="images/insight-3.jpg"></video>
+            <button class="mute-toggle" aria-label="Toggle mute" data-state="muted">🔇</button>
+            <div class="cap">Cuplikan: Garansi & Autentikasi</div>
+          </div>
+          <h2>Kebijakan Garansi & Autentikasi Produk</h2>
+          <div class="date">1 Juli 2025</div>
+          <p class="lead">Keaslian adalah fondasi kepercayaan. Kami mendokumentasikan setiap batch, menyiapkan bukti uji acak, dan menyediakan SOP verifikasi agar reseller punya pegangan kuat saat menghadapi pertanyaan pelanggan.</p>
+          <p>Setiap unit dicatat nomor batch/lot‑nya saat masuk gudang. Kami menyimpan foto, label, dan catatan pemasok. Jika ada klaim, proses verifikasi dilakukan maksimal 3 × 24 jam kerja dengan opsi penggantian/retur sesuai hasil evaluasi.</p>
+          <p>Reseller dibekali <strong>paket dokumentasi</strong> singkat (foto batch, catatan pemasok, dan hasil uji) yang bisa ditunjukkan ke konsumen akhir. Praktik ini terbukti meningkatkan tingkat kepercayaan dan menurunkan potensi sengketa.</p>
+          <p>Terakhir, siapkan halaman FAQ singkat tentang cara membedakan parfum asli vs palsu, kebijakan retur, dan panduan penyimpanan. Edukasi sederhana yang konsisten akan menurunkan beban layanan dan mempercepat konversi.</p>
+        </article>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container copy">
+      <span>&copy; <span id="y"></span> Dirac, Inc.</span><span class="dot"></span><span>All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Mute/unmute per video with autoplay default
+    document.querySelectorAll('.vid').forEach(function(box){
+      const video = box.querySelector('video');
+      const btn = box.querySelector('.mute-toggle');
+      if(!video || !btn) return;
+
+      // Ensure autoplay muted on load
+      video.muted = true;
+      video.autoplay = true;
+      video.playsInline = true;
+      // attempt to play (browsers may block until user gesture, but that's okay)
+      const tryPlay = () => video.play().catch(()=>{});
+      tryPlay();
+
+      function updateIcon(){
+        btn.textContent = video.muted ? '🔇' : '🔊';
+        btn.setAttribute('data-state', video.muted ? 'muted' : 'unmuted');
+        btn.setAttribute('aria-label', video.muted ? 'Unmute video' : 'Mute video');
+      }
+      updateIcon();
+
+      btn.addEventListener('click', function(){
+        // toggle muted
+        video.muted = !video.muted;
+        if(!video.muted){
+          // set a comfortable volume
+          video.volume = 0.85;
+        }
+        // play in case it was paused
+        tryPlay();
+        updateIcon();
+      });
+
+      // Optional: clicking video also toggles mute
+      video.addEventListener('click', function(){
+        video.muted = !video.muted;
+        if(!video.muted){ video.volume = 0.85; }
+        tryPlay();
+        updateIcon();
+      });
+    });
+  </script>
+</body>
+</html>
