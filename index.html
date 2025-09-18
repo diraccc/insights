@@ -15,7 +15,6 @@
       --accent2:#2563eb;
       --border:rgba(255,255,255,.08);
       --shadow:0 6px 30px rgba(0,0,0,.35);
-      --radius:16px;
       --glass:rgba(0,0,0,.55);
     }
     *{box-sizing:border-box}
@@ -24,7 +23,7 @@
     a{color:inherit;text-decoration:none}
     .container{width:min(1040px,92%);margin-inline:auto}
 
-    /* Sticky Header */
+    /* Sticky Header (ringkas & rapi di Chrome/HP) */
     header{
       position:sticky; top:0; z-index:1000;
       background:linear-gradient(180deg, rgba(15,23,32,.98), rgba(15,23,32,.92) 60%, rgba(15,23,32,0));
@@ -49,13 +48,13 @@
     .list{display:grid;gap:1.1rem}
     .card{background:var(--panel);border:1px solid var(--border);border-radius:14px;
           padding:1rem;box-shadow:var(--shadow)}
-    .card h2{margin:.4rem 0 .4rem;font-size:1.1rem}
+    .card h2{margin:.4rem 0 .4rem;font-size:1.12rem}
     .date{color:var(--muted);font-size:.9rem;margin-bottom:.6rem}
     .card p{margin:.65rem 0}
     .lead{font-weight:600}
 
-    /* Responsive video wrapper + mute/unmute button */
-    .vid{position:relative;aspect-ratio:16/9;background:#000;border-radius:12px;overflow:hidden}
+    /* Video wrapper + tombol mute/unmute */
+    .vid{position:relative;aspect-ratio:16/9;background:#000;border-radius:12px;overflow:hidden;margin-bottom:.6rem}
     .vid video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
     .cap{position:absolute;left:10px;bottom:10px;background:rgba(0,0,0,.45);
       color:#fff;padding:.25rem .5rem;border-radius:8px;font-size:.75rem}
@@ -109,14 +108,14 @@
             <video autoplay muted playsinline loop preload="metadata"
                    src="videos/insight-1.mp4" poster="images/insight-1.jpg"></video>
             <button class="mute-toggle" aria-label="Toggle mute" data-state="muted">🔇</button>
-            <div class="cap">Cuplikan: Varian untuk Pasar Lokal</div>
+            <div class="cap">Cuplikan Insight 1</div>
           </div>
-          <h2>Memilih Varian Parfum yang Tepat untuk Pasar Lokal</h2>
-          <div class="date">10 September 2025</div>
-          <p class="lead">Memahami preferensi aroma lokal adalah kunci keberhasilan pemasaran parfum. Perbedaan iklim, budaya, dan pola aktivitas sehari‑hari memengaruhi preferensi, sehingga strategi pemilihan varian harus berbasis data, bukan sekadar tren global.</p>
-          <p>Di kawasan pesisir, konsumen cenderung memilih aroma <em>citrus</em>, <em>aquatic</em>, dan <em>green</em> yang terasa bersih serta ringan. Di kota besar, penerimaan terhadap <em>gourmand</em>, <em>amber</em>, dan <em>woody</em> biasanya lebih tinggi karena digunakan pada ruang ber-AC dan aktivitas malam.</p>
-          <p>Kami sarankan lakukan tiga langkah ringan: (1) <strong>sampling terarah</strong>—sediakan tester andalan di etalase; (2) <strong>uji promosi kecil</strong> selama 7–14 hari untuk 3–5 varian prioritas; (3) <strong>pantau konversi</strong> per varian dan waktu pembelian. Dari sini, Anda dapat memetakan varian inti (fast mover), varian diferensiasi (signature), serta varian musiman.</p>
-          <p>Gunakan metrik sederhana: rasio uji-coba ke pembelian, kecepatan habis stok per minggu, dan biaya promosi per transaksi yang berhasil. Dengan begitu, stok dan kampanye bisa disesuaikan secara presisi, memangkas risiko <em>overstock</em> dan meningkatkan perputaran modal.</p>
+          <h2>Gimana Sih Caranya Sukses di Bidang Reseller Produk?</h2>
+          <div class="date">Diperbarui</div>
+          <p class="lead">Sukses di bidang reseller produk dimulai dari memahami kebutuhan pasar. Produk yang kamu jual harus relevan dengan gaya hidup dan selera konsumen.</p>
+          <p>Kalau di parfum, misalnya, ada pembeli yang mencari aroma segar untuk aktivitas harian, ada juga yang ingin aroma elegan untuk acara formal. Dengan mengenali kebutuhan ini, kamu bisa lebih tepat dalam memberi rekomendasi dan membangun kesan bahwa kamu bukan hanya menjual produk, tetapi juga memberi solusi.</p>
+          <p>Langkah berikutnya adalah membangun branding yang kuat dan konsisten. Branding ini mencakup cara kamu mempresentasikan produk—baik dari packaging, konten promosi, sampai storytelling yang kamu bangun. Produk reseller sering kalah bersaing kalau hanya mengandalkan harga, karena itu kamu perlu membedakan diri dengan menghadirkan pengalaman emosional. Misalnya, bukan hanya memajang parfum, tapi menceritakan sensasi dan karakter yang ditimbulkan aromanya.</p>
+          <p>Terakhir, kunci keberhasilan reseller adalah menciptakan pengalaman pelanggan yang positif. Respons cepat, pelayanan ramah, dan bonus kecil bisa membuat orang merasa dihargai. Setelah itu, lakukan inovasi: tawarkan bundling, paket tester, atau varian baru agar pembeli lama tetap tertarik. Dengan kombinasi pemahaman pasar, branding yang tepat, dan pelayanan yang memuaskan, kamu bisa membangun bisnis reseller produk yang tidak hanya bertahan, tapi juga terus berkembang.</p>
         </article>
 
         <!-- INSIGHT 2 -->
@@ -125,14 +124,14 @@
             <video autoplay muted playsinline loop preload="metadata"
                    src="videos/insight-2.mp4" poster="images/insight-2.jpg"></video>
             <button class="mute-toggle" aria-label="Toggle mute" data-state="muted">🔇</button>
-            <div class="cap">Cuplikan: Strategi Harga</div>
+            <div class="cap">Cuplikan Insight 2</div>
           </div>
-          <h2>Strategi Harga untuk Reseller Parfum</h2>
-          <div class="date">22 Agustus 2025</div>
-          <p class="lead">Menentukan margin yang sehat membuat bisnis berkelanjutan. Mulailah dari perhitungan biaya per unit yang benar, lalu susun tangga harga yang fleksibel agar volume pembelian naik tanpa mengorbankan profit.</p>
-          <p>Masukkan seluruh komponen biaya: harga beli, ongkos kirim, packing, <em>marketplace fee</em>, retur rata‑rata, hingga biaya konten. Tetapkan <strong>margin dasar 25–40%</strong> untuk menutup operasional dan promosi. Untuk seri premium, margin dapat dinaikkan 50–70% selama nilai produk tersampaikan dengan baik.</p>
-          <p>Bangun <strong>struktur bertingkat</strong>: harga ecer, reseller, dan grosir. Syaratkan kelipatan minimal (mis. 3/6/12 pcs) agar biaya logistik efisien. Lengkapi dengan <em>bundle</em> tematik dan diskon musiman yang tetap menjaga margin total.</p>
-          <p>Monitor metrik: GM% (gross margin), GMROI (margin vs nilai stok), dan CAC promosi per kanal. Jika GMROI turun, evaluasi varian, kurangi SKU lambat, dan fokus pada varian dengan ROI tertinggi.</p>
+          <h2>Rahasia Membaca Pasar Biar Produk Cepat Laku</h2>
+          <div class="date">Diperbarui</div>
+          <p class="lead">Sebagai reseller, memahami pasar adalah pondasi kesuksesan yang paling penting. Produk yang kamu jual tidak akan cepat laku jika hanya sekadar dipajang tanpa pemahaman siapa target pembelinya.</p>
+          <p>Konsumen membeli sesuatu karena merasa produk tersebut relevan dengan kebutuhan mereka. Itulah mengapa riset kecil seperti melihat tren media sosial, membaca ulasan kompetitor, atau bertanya langsung ke pelanggan tentang preferensi mereka sangat penting. Dengan langkah sederhana ini, kamu bisa memberikan kesan bahwa produkmu bukan sekadar barang, tetapi jawaban atas kebutuhan nyata.</p>
+          <p>Lebih dari sekadar mengikuti tren, membaca pasar juga menuntut kemampuan untuk mengantisipasi kebutuhan yang belum disadari pembeli. Banyak orang bahkan tidak tahu mereka menginginkan sebuah produk sampai ada yang memperkenalkannya. Misalnya, ketika tren parfum unisex mulai populer, reseller yang tanggap bisa lebih dulu menyediakan pilihan tersebut dibanding pesaingnya. Dengan begitu, kamu tidak hanya mengikuti arus, melainkan mampu menjadi penggerak tren di kalangan pelangganmu.</p>
+          <p>Selain itu, pemahaman pasar yang tajam juga membantu menghindari risiko stok menumpuk. Dengan mengetahui produk mana yang sedang diminati dan mana yang kurang relevan, kamu bisa mengatur strategi pembelian dan promosi dengan lebih efisien. Hasil akhirnya, modal berputar lebih cepat, penjualan lebih lancar, dan bisnis reseller terasa lebih stabil. Membaca pasar pada dasarnya adalah seni sekaligus ilmu: seni dalam mengamati perilaku konsumen, dan ilmu dalam menafsirkan data untuk membuat keputusan tepat.</p>
         </article>
 
         <!-- INSIGHT 3 -->
@@ -141,14 +140,30 @@
             <video autoplay muted playsinline loop preload="metadata"
                    src="videos/insight-3.mp4" poster="images/insight-3.jpg"></video>
             <button class="mute-toggle" aria-label="Toggle mute" data-state="muted">🔇</button>
-            <div class="cap">Cuplikan: Garansi & Autentikasi</div>
+            <div class="cap">Cuplikan Insight 3</div>
           </div>
-          <h2>Kebijakan Garansi & Autentikasi Produk</h2>
-          <div class="date">1 Juli 2025</div>
-          <p class="lead">Keaslian adalah fondasi kepercayaan. Kami mendokumentasikan setiap batch, menyiapkan bukti uji acak, dan menyediakan SOP verifikasi agar reseller punya pegangan kuat saat menghadapi pertanyaan pelanggan.</p>
-          <p>Setiap unit dicatat nomor batch/lot‑nya saat masuk gudang. Kami menyimpan foto, label, dan catatan pemasok. Jika ada klaim, proses verifikasi dilakukan maksimal 3 × 24 jam kerja dengan opsi penggantian/retur sesuai hasil evaluasi.</p>
-          <p>Reseller dibekali <strong>paket dokumentasi</strong> singkat (foto batch, catatan pemasok, dan hasil uji) yang bisa ditunjukkan ke konsumen akhir. Praktik ini terbukti meningkatkan tingkat kepercayaan dan menurunkan potensi sengketa.</p>
-          <p>Terakhir, siapkan halaman FAQ singkat tentang cara membedakan parfum asli vs palsu, kebijakan retur, dan panduan penyimpanan. Edukasi sederhana yang konsisten akan menurunkan beban layanan dan mempercepat konversi.</p>
+          <h2>Branding yang Bikin Orang Ingat Selamanya</h2>
+          <div class="date">Diperbarui</div>
+          <p class="lead">Branding adalah kunci agar produkmu menonjol di tengah keramaian pasar. Banyak reseller hanya fokus pada harga, padahal konsumen sering membeli karena cerita atau citra yang melekat pada sebuah produk.</p>
+          <p>Branding bukan cuma soal logo, warna, atau kemasan, melainkan bagaimana kamu menghadirkan pengalaman menyeluruh. Mulai dari cara kamu berkomunikasi di media sosial, gaya foto produk, hingga tone bahasa yang konsisten, semuanya berperan membentuk persepsi konsumen. Jika branding kuat, orang akan lebih mudah mengingatmu dibanding ratusan reseller lain yang menawarkan produk serupa.</p>
+          <p>Branding yang emosional juga bisa menciptakan koneksi batin dengan konsumen. Misalnya, saat menjual parfum, kamu tidak hanya mengatakan “aromanya segar”, tetapi menambahkan cerita seperti “parfum ini sering disebut senjata rahasia saat first date”. Narasi semacam itu membuat konsumen merasa mereka sedang membeli pengalaman, bukan sekadar botol parfum. Storytelling inilah yang mampu mengubah produk biasa menjadi sesuatu yang bernilai lebih tinggi di mata pembeli.</p>
+          <p>Selain membedakan diri, branding juga berfungsi membangun loyalitas jangka panjang. Jika konsumen merasa nyaman dan percaya dengan citra yang kamu bangun, mereka akan kembali membeli tanpa perlu bujukan besar. Bahkan, mereka bisa menjadi promotor sukarela yang merekomendasikan produkmu ke orang lain. Jadi, branding bukan hanya kosmetik, melainkan investasi yang menentukan daya tahan dan pertumbuhan bisnis reseller dalam jangka panjang.</p>
+        </article>
+
+        <!-- INSIGHT 4 -->
+        <article class="card">
+          <div class="vid">
+            <video autoplay muted playsinline loop preload="metadata"
+                   src="videos/insight-4.mp4" poster="images/insight-4.jpg"></video>
+            <button class="mute-toggle" aria-label="Toggle mute" data-state="muted">🔇</button>
+            <div class="cap">Cuplikan Insight 4</div>
+          </div>
+          <h2>Rasa Penasaran Sebagai Senjata Jitu</h2>
+          <div class="date">Diperbarui</div>
+          <p class="lead">Dalam dunia reseller, menciptakan rasa penasaran bisa menjadi strategi pemasaran yang sangat efektif. Alih-alih membocorkan semua detail produk, cobalah memberi sedikit teaser yang mengundang rasa ingin tahu.</p>
+          <p>Misalnya, dengan kalimat “Ada aroma yang bikin orang balik lagi cuma buat cari tahu, kira-kira wangi apa ya?” Teknik seperti ini membuat calon pembeli tertarik untuk berinteraksi lebih jauh. Mereka terdorong untuk bertanya, menebak, bahkan mencari tahu langsung dengan mencoba produknya.</p>
+          <p>Rasa penasaran juga bekerja sangat baik di media sosial karena mampu meningkatkan interaksi. Setiap kali orang ikut menebak, berkomentar, atau membagikan postinganmu, produkmu dipromosikan secara gratis. Semakin tinggi interaksi, semakin besar peluang audiens baru untuk tertarik mencoba produk tersebut. Strategi ini cocok dipadukan dengan konten interaktif seperti polling, kuis, atau “tebak aroma” agar lebih menarik.</p>
+          <p>Selain mendatangkan interaksi, rasa penasaran juga menambah nilai eksklusivitas pada produk. Konsumen akan merasa bahwa produk tersebut memiliki rahasia yang hanya bisa diungkap dengan mencobanya sendiri. Perasaan ini menciptakan dorongan psikologis yang kuat untuk membeli. Jadi, membangun sedikit misteri bukan berarti menyembunyikan kualitas produk, tetapi justru cara cerdas untuk membuat orang semakin penasaran dan akhirnya jatuh hati pada produkmu.</p>
         </article>
 
       </div>
@@ -162,20 +177,19 @@
   </footer>
 
   <script>
-    // Year
+    // Tahun
     document.getElementById('y').textContent = new Date().getFullYear();
 
-    // Mute/unmute per video with autoplay default
+    // Toggle mute/unmute untuk setiap video (autoplay default)
     document.querySelectorAll('.vid').forEach(function(box){
       const video = box.querySelector('video');
       const btn = box.querySelector('.mute-toggle');
       if(!video || !btn) return;
 
-      // Ensure autoplay muted on load
+      // pastikan autoplay + muted saat load
       video.muted = true;
       video.autoplay = true;
       video.playsInline = true;
-      // attempt to play (browsers may block until user gesture, but that's okay)
       const tryPlay = () => video.play().catch(()=>{});
       tryPlay();
 
@@ -187,18 +201,13 @@
       updateIcon();
 
       btn.addEventListener('click', function(){
-        // toggle muted
         video.muted = !video.muted;
-        if(!video.muted){
-          // set a comfortable volume
-          video.volume = 0.85;
-        }
-        // play in case it was paused
+        if(!video.muted){ video.volume = 0.85; }
         tryPlay();
         updateIcon();
       });
 
-      // Optional: clicking video also toggles mute
+      // Klik video juga toggle
       video.addEventListener('click', function(){
         video.muted = !video.muted;
         if(!video.muted){ video.volume = 0.85; }
