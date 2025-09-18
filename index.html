@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Insights — Dirac Of Fragrance</title>
+  <title>Insights — Dirac Of Fragrance (Fixed)</title>
   <meta name="description" content="Kumpulan insight dari Dirac Of Fragrance">
   <style>
     :root{
@@ -73,7 +73,13 @@
       background:rgba(0,0,0,.55);
       display:none;
     }
-    .mute-toggle:active, .play-overlay:active{transform:translate(-50%,-50%) scale(.98)}
+    .mute-toggle:active, .play-overlay:active{transform:scale(.98)}
+    .mute-toggle.out{position:static; width:44px; height:44px; border-radius:999px;
+      background:var(--panel); color:#fff; font-size:20px; border:1px solid var(--border); box-shadow:none}
+    .mute-toggle.out:active{transform:scale(.98)}
+
+    .photo{position:relative;aspect-ratio:16/9;background:#111;border-radius:12px;overflow:hidden;margin-bottom:.6rem}
+    .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 
     footer{border-top:1px solid var(--border);padding:18px 0;color:var(--muted)}
     .copy{display:flex;align-items:center;gap:.4rem;flex-wrap:wrap}
@@ -83,15 +89,7 @@
       .brand h1{font-size:1rem}
       .brand .sub{font-size:.8rem}
     }
-  
-    /* === Custom edits per request === */
-    .photo{position:relative;aspect-ratio:16/9;background:#111;border-radius:12px;overflow:hidden;margin-bottom:.6rem}
-    .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-    .card-tools{display:flex;justify-content:flex-end;margin:.4rem 0 .2rem}
-    .mute-toggle.out{position:static; width:44px; height:44px; border-radius:999px;
-      background:var(--panel); color:#fff; font-size:20px; border:1px solid var(--border)}
-    .mute-toggle.out:active{transform:scale(.98)}
-</style>
+  </style>
 </head>
 <body>
   <header>
@@ -121,16 +119,14 @@
         <!-- INSIGHT 1 -->
         <article class="card">
           <div class="vid">
-            <video autoplay muted playsinline loop preload="metadata"
-                   src="1.mp4"></video>
-            
+            <video autoplay muted playsinline loop preload="metadata" src="1.mp4"></video>
             <div class="cap"></div>
           </div>
           <h2>Gimana Sih Caranya Sukses di Bidang Reseller Produk?</h2>
-          <div class
+          <div class="date">Diperbarui</div>
           <div class="card-tools">
-            <button class="mute-toggle out" aria-label="Toggle mute" data-state="muted">🔇</button>
-          </div>Diperbarui</div>
+            <button class="mute-toggle out" type="button" aria-label="Unmute video" data-state="muted">🔇</button>
+          </div>
           <p class="lead">Sukses di bidang reseller produk dimulai dari memahami kebutuhan pasar. Produk yang kamu jual harus relevan dengan gaya hidup dan selera konsumen.</p>
           <p>Kalau di parfum, misalnya, ada pembeli yang mencari aroma segar untuk aktivitas harian, ada juga yang ingin aroma elegan untuk acara formal. Dengan mengenali kebutuhan ini, kamu bisa lebih tepat dalam memberi rekomendasi dan membangun kesan bahwa kamu bukan hanya menjual produk, tetapi juga memberi solusi.</p>
           <p>Langkah berikutnya adalah membangun branding yang kuat dan konsisten. Branding ini mencakup cara kamu mempresentasikan produk—baik dari packaging, konten promosi, sampai storytelling yang kamu bangun. Produk reseller sering kalah bersaing kalau hanya mengandalkan harga, karena itu kamu perlu membedakan diri dengan menghadirkan pengalaman emosional. Misalnya, bukan hanya memajang parfum, tapi menceritakan sensasi dan karakter yang ditimbulkan aromanya.</p>
@@ -140,10 +136,9 @@
         <!-- INSIGHT 2 -->
         <article class="card">
           <div class="photo">
-            <!-- TODO: Ganti src dengan foto asli -->
             <img src="images/insight-2.jpg" alt="Foto Insight 2" loading="lazy">
           </div>
-<h2>Rahasia Membaca Pasar Biar Produk Cepat Laku</h2>
+          <h2>Rahasia Membaca Pasar Biar Produk Cepat Laku</h2>
           <div class="date">Diperbarui</div>
           <p class="lead">Sebagai reseller, memahami pasar adalah pondasi kesuksesan yang paling penting. Produk yang kamu jual tidak akan cepat laku jika hanya sekadar dipajang tanpa pemahaman siapa target pembelinya.</p>
           <p>Konsumen membeli sesuatu karena merasa produk tersebut relevan dengan kebutuhan mereka. Itulah mengapa riset kecil seperti melihat tren media sosial, membaca ulasan kompetitor, atau bertanya langsung ke pelanggan tentang preferensi mereka sangat penting. Dengan langkah sederhana ini, kamu bisa memberikan kesan bahwa produkmu bukan sekadar barang, tetapi jawaban atas kebutuhan nyata.</p>
@@ -154,10 +149,9 @@
         <!-- INSIGHT 3 -->
         <article class="card">
           <div class="photo">
-            <!-- TODO: Ganti src dengan foto asli -->
             <img src="images/insight-3.jpg" alt="Foto Insight 3" loading="lazy">
           </div>
-<h2>Branding yang Bikin Orang Ingat Selamanya</h2>
+          <h2>Branding yang Bikin Orang Ingat Selamanya</h2>
           <div class="date">Diperbarui</div>
           <p class="lead">Branding adalah kunci agar produkmu menonjol di tengah keramaian pasar. Banyak reseller hanya fokus pada harga, padahal konsumen sering membeli karena cerita atau citra yang melekat pada sebuah produk.</p>
           <p>Branding bukan cuma soal logo, warna, atau kemasan, melainkan bagaimana kamu menghadirkan pengalaman menyeluruh. Mulai dari cara kamu berkomunikasi di media sosial, gaya foto produk, hingga tone bahasa yang konsisten, semuanya berperan membentuk persepsi konsumen. Jika branding kuat, orang akan lebih mudah mengingatmu dibanding ratusan reseller lain yang menawarkan produk serupa.</p>
@@ -168,10 +162,9 @@
         <!-- INSIGHT 4 -->
         <article class="card">
           <div class="photo">
-            <!-- TODO: Ganti src dengan foto asli -->
             <img src="images/insight-4.jpg" alt="Foto Insight 4" loading="lazy">
           </div>
-<h2>Rasa Penasaran Sebagai Senjata Jitu</h2>
+          <h2>Rasa Penasaran Sebagai Senjata Jitu</h2>
           <div class="date">Diperbarui</div>
           <p class="lead">Dalam dunia reseller, menciptakan rasa penasaran bisa menjadi strategi pemasaran yang sangat efektif. Alih-alih membocorkan semua detail produk, cobalah memberi sedikit teaser yang mengundang rasa ingin tahu.</p>
           <p>Misalnya, dengan kalimat “Ada aroma yang bikin orang balik lagi cuma buat cari tahu, kira-kira wangi apa ya?” Teknik seperti ini membuat calon pembeli tertarik untuk berinteraksi lebih jauh. Mereka terdorong untuk bertanya, menebak, bahkan mencari tahu langsung dengan mencoba produknya.</p>
@@ -193,58 +186,52 @@
     // Tahun
     document.getElementById('y').textContent = new Date().getFullYear();
 
-    // Autoplay + toggle mute/unmute + play overlay (kalau autoplay diblokir)
-    
+    // === FIXED: Toggle mute/unmute on speaker button (per card) ===
     document.querySelectorAll('article.card').forEach(function(card){
       const video = card.querySelector('.vid video');
       const btn = card.querySelector('.mute-toggle');
+
       if(!video || !btn) return;
 
-      // Force autoplay (muted) per browser policy
+      // Ensure proper attributes for autoplay policies
       video.muted = true;
-      video.autoplay = true;
-      video.playsInline = true;
       video.loop = true;
+      video.playsInline = true;
+      if (!video.getAttribute('preload')) video.setAttribute('preload', 'metadata');
+      // target playback volume when unmuted
+      let targetVolume = 0.85;
+      video.volume = targetVolume;
 
-      const tryPlay = () => { video.play().catch(()=>{}); };
+      const tryPlay = () => {
+        const p = video.play();
+        if (p && typeof p.catch === 'function') p.catch(()=>{});
+      };
 
       function updateIcon(){
-        btn.textContent = video.muted ? '🔇' : '🔊';
-        btn.setAttribute('data-state', video.muted ? 'muted' : 'unmuted');
+        const isMuted = video.muted || video.volume === 0;
+        btn.textContent = isMuted ? '🔇' : '🔊';
+        btn.setAttribute('data-state', isMuted ? 'muted' : 'unmuted');
+        btn.setAttribute('aria-label', isMuted ? 'Unmute video' : 'Mute video');
       }
 
+      // Initial state
       updateIcon();
       tryPlay();
+      video.addEventListener('loadedmetadata', tryPlay);
 
+      // Click speaker button to toggle sound
       btn.addEventListener('click', function(){
         video.muted = !video.muted;
-        if(!video.muted){ video.volume = 0.85; }
-        tryPlay();
-        updateIcon();
-      });
-    });
-function updateIcon(){
-        btn.textContent = video.muted ? '🔇' : '🔊';
-        btn.setAttribute('data-state', video.muted ? 'muted' : 'unmuted');
-        btn.setAttribute('aria-label', video.muted ? 'Unmute video' : 'Mute video');
-      }
-      updateIcon();
-      tryPlay();
-
-      btn.addEventListener('click', function(){
-        video.muted = !video.muted;
-        if(!video.muted){ video.volume = 0.85; }
-        tryPlay();
+        if (!video.muted) {
+          video.volume = targetVolume;
+          if (video.paused) tryPlay();
+        }
         updateIcon();
       });
 
-      play.addEventListener('click', function(){
-        // user gesture: unhide video playback
-        tryPlay();
-      });
-
-      // Jika user pause manual, munculkan overlay play lagi
-      } else { video.pause(); }
+      // Optional UX: click on video toggles play/pause
+      video.addEventListener('click', function(){
+        if (video.paused) tryPlay(); else video.pause();
       });
     });
   </script>
